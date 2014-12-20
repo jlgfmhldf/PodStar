@@ -488,7 +488,7 @@ hr {
     width: 360px;
   }
   .top {
-    min-width: 360px;
+    min-width: 460px;
   }
   .track__title {
     font-size: 34px;
@@ -506,6 +506,7 @@ hr {
   .latest__track {
     width: 360px;
     background-size: cover;
+    margin: 0 auto;
   }
   .latest__tracks {
     display: block;
