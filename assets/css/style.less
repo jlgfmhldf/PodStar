@@ -1,0 +1,649 @@
+body{
+    font-family: FuturaNewBook, sans-serif;
+}
+
+p, h1{
+    margin: 0;
+}
+
+br{
+    clear: both;
+}
+
+a{
+    text-decoration: none;
+}
+
+hr{
+    border: none;
+}
+
+@font-face{
+    font-family: FuturaNewBook; 
+    src: url(../fonts/Futura_New_Book_Regular.ttf);
+    font-weight: 300;
+}
+
+@font-face{
+    font-family: FuturaNewBook;
+    src: url(../fonts/FuturaNewDemi.otf);
+    font-weight: 100;
+}
+
+@font-face{
+    font-family: FuturaNewBook;
+    src: url(../fonts/FuturaNewLight.ttf);
+    font-weight: 200;
+}
+
+@font-face{
+    font-family: FuturaNewBook;
+    src: url(../fonts/FuturaNewMedium.otf);
+    font-weight: 600;
+}
+
+.size(@width, @height){
+    width: @width;
+    height: @height;
+}
+
+.pseudo{
+    content: "";
+    position: absolute;
+    display: block;
+}
+
+.padding(@value){
+    padding: @value;
+    box-sizing: border-box;
+}
+
+.button(@border, @b-radius, @bg:none){
+    outline: none;
+    border: @border;
+    border-radius: @b-radius;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    background: @bg;
+}
+
+.wrap{
+    .size(940px, auto);
+    margin: 0 auto;
+}
+
+.top{
+    position: relative;
+    color: #fff;
+    background: url(file:///C:/Users/work/Desktop/211/Podstar/assets/img/top__bg.jpg) no-repeat;
+    background-size: cover;
+    min-width: 960px;
+
+    .wrap{
+        padding: 32px 0 0 0;
+        box-sizing: border-box;
+    }
+}
+
+.player{
+    .size(100%, 90px);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.logo{
+    background: url(../img/PodStar_logo.png) no-repeat;
+    .size(147px, 36px);
+    float: left;
+}
+
+.menu{
+    float: right;
+    .size(26px, 16px);
+    background: url(../img/menu.png) no-repeat;
+    cursor: pointer;
+}
+
+.track__name{
+    font-weight: 100;
+    font-size: 18px;
+    margin-top: 72px;
+}
+
+.track__status{
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.track__title{
+    font-size: 38px;
+    line-height: 54px;
+    font-weight: 300;
+    margin: 10px 0 23px 0;
+    width: 560px;
+}
+
+.track__date{
+    padding: 0 36px 0 0;
+}
+
+.track__time{
+    padding: 0 14px 0 0;
+}
+
+.track__like{
+    padding: 0 34px 0 0;
+    cursor: pointer;
+}
+
+.track__date,
+.track__time,
+.track__like,
+.track__comments{
+    display: inline-block;
+    color: inherit;
+    position: relative;
+}
+
+.track__time:before,
+.track__like:after,
+.track__comments:after{
+    .pseudo;
+    background: url(../img/track__info__icons.png) no-repeat;
+    width: 16px;
+}
+
+.track__time:before{
+    height: 16px;
+    left: -17px;
+    top: 1px;
+}
+
+.track__like:after{
+    height: 16px;
+    background-position: -99px;
+    width: 18px;
+    top: 1px;
+    right: 13px;
+}
+
+.track__comments:after{
+    height: 16px;
+    background-position: -153px;
+    width: 17px;
+    top: 1px;
+    right: -20px;
+}
+
+.track__info{
+    font-size: 14px;
+    color: rgba(255, 255, 255, .8);
+    margin-bottom: 76px;
+}
+
+.itunes{
+    .size(246px, 84px);
+    border-radius: 8px;
+    background: rgba(255,255,255,.3) url(../img/itunes__logo.png) no-repeat 26px center;
+    float: right;
+    position: relative;
+    top: -208px;
+    padding: 16px 11px 0 92px;
+    box-sizing: border-box;
+    .text(200, 22px,inherit,27px)
+}
+
+.itunes__name_company{
+    font-weight: 300;
+}
+
+@pink: #f16767;
+@blue-1: #56b8b9;
+@blue-2: #5baad6;
+
+.text(@fw, @size, @color: inherit, @line-height: normal){
+    font-weight: @fw;
+    font-size: @size;
+    color: @color;
+    line-height: @line-height;
+}
+
+.twitter{
+    min-width: 940px;
+    background: 
+                url(../img/tw__bird.png) no-repeat center 69px,
+                url(../img/tw__bg.jpg) no-repeat;
+    background-size: auto, cover;
+    padding: 142px 0 69px 0;
+    box-sizing: border-box;
+
+    &__entry{
+        margin-bottom: 19px;
+    }
+}
+
+.slide{
+    .text(100, 19px, inherit, 26px);
+    text-align: center;
+    width: 100%;
+
+    a{
+        color: inherit;
+        text-decoration: underline;
+    }
+
+    .author, .date{
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        .text(700, 14px);
+    }
+
+    .date{
+        font-weight: 300;
+    }
+}
+
+.owl{
+    &-pagination{
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    &-page{
+        .size(12px, 12px);
+        border-radius: 6px;
+        background: #fff;
+        display: inline-block;
+        text-align: center;
+        margin-right: 17px;
+
+        &.active, &:hover{
+            background: #bf9147;
+        }
+        &:last-child{
+            margin: 0;
+        }
+    }
+}
+
+.podcats{
+    padding: 63px 0 80px;
+
+    &__link_episodes{
+        .size(300px, 50px);
+        background: @blue-2;
+        .text(300, 24px, #fff, 50px);
+        float: left;
+        margin: 0 20px 20px 0;
+        display: block;
+        text-align: center;
+        font-family: sans-serif;
+
+        &:nth-of-type(3), &:nth-of-type(6){
+            margin-right: 0;
+        }
+
+        &:hover, &:active, a{
+            background: darken(@blue-2, 10%);
+        }
+    }
+
+    &__menu{
+        margin: 0 0 88px 0;
+    }
+
+    &__menu__item{
+        .text(100, 24px, @blue-2);
+        transition-duration: .3s;
+        float: left;
+        display: block;
+        margin-right: 28px;
+
+        &:hover, &.selected{
+            text-decoration: underline;
+            color: @blue-1;
+        }
+
+        &.selected{
+            color: @pink;
+        }
+    }
+
+    &__host{
+        float: left;
+        .size(400px, 140px);
+        .host--1 &__foto, &__foto{
+            .size(140px, 140px);
+            background: url(../img/host-1.png) no-repeat;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .host--2 &__foto{
+            background: url(../img/host-2.png) no-repeat;
+        }
+
+        &__some_text{
+            .text(300, 15px, #cacaca);
+            margin: 30px 0 0 0;
+        }
+
+        &__name{
+            .text(700, 28px);
+            margin: 6px 0 0 0;
+        }
+
+        &__nickname{
+            .text(300, 15px, @blue-2);
+            margin: 9px 0 0 0;
+            display: block;
+
+            &:hover, &:active{
+                color: darken(@blue-2, 10%);
+            }
+        }
+    } 
+
+    &__hosts{
+        font-family: Arial, sans-serif;
+        margin-bottom: 56px;
+    }
+}
+
+.host--2{
+    margin: 0;
+}
+
+.host--1{
+    margin-right: 81px;
+}
+
+.footer{
+    background: #2a2a2a;
+    border-top: 5px solid #d3a964;
+    .text(100, 20px, #fff, 36px);
+    padding: 75px 0 70px 0;
+    box-sizing: border-box;
+
+    .copy, &__contacts{
+        .text(300, 15px, #d6d6d6);
+    }
+
+    .wrapp__some_text{
+        float: left;
+        width: 42%;
+    }
+
+    .wrapp__some_text--2{
+        float: left;
+    }
+
+    a{
+        color: inherit;
+    }
+}
+
+/**************LATEST**************/
+
+
+.latest{
+    color: #fff;
+    padding-bottom: 74px;
+
+    &__tracks{
+        -webkit-column-count: 3;
+        -webkit-column-gap: 20px;
+        column-count: 3;
+        column-gap: 20px;
+    }
+
+    &__track{
+        width: 300px;
+        background: @pink url(../img/latest__img-1.jpg) no-repeat center -18px;
+        margin: 0 20px 20px 0;
+        display: inline-block;
+        position: relative;
+        .padding(17px 0 0 0);
+            
+            /*&:nth-of-type(3), &:nth-of-type(6){
+                margin-right: 0;
+            }*/
+
+            &__tooltip{
+                background-color: inherit; /*inherit*/
+                margin-top: 104px;
+                padding: 20px 20px 28px;
+                width: 261px;
+
+            }
+
+    }
+
+    &__title{
+        font-size: 30px;
+        color: #2e2a28;
+        margin: 47px 0 29px;
+        }
+
+    &__playing{
+        .button(2px solid #fff, 17px);
+        .size(192px, 29px);
+        display: block;
+        background: rgba(0, 0, 0, .06) url(../img/arrow.png) no-repeat 143px center;
+        .text(600, 14px, #fff, 27px);
+        box-sizing: border-box;
+        text-transform: uppercase;
+
+        &:hover{
+            background-color: rgba(0, 0, 0, .02);
+        }
+
+        &__inactive{
+            border: none;
+            background-image: none;
+
+                &:hover{
+                    background-color: rgba(0, 0, 0, .06);
+                }
+        }
+
+
+    }
+
+    &__track--2{
+        background-image: url(../img/latest__image-2.jpg);
+    }
+
+    &__track--3{
+        background-image: url(../img/latest__img-3.jpg);
+    }
+
+    &__track--4{
+        background-image: url(../img/latest__img-4.jpg)
+    }
+
+    &__track--5{
+        background-image: url(../img/latest__img-5.jpg)
+    }
+
+    &__track--6{
+        background-image: url(../img/latest__img--6.jpg)
+    }
+
+    &__mask{
+        .size(100%, 141px);
+        position: absolute;
+        top: 0;
+        transition-duration: .5s;
+        background: radial-gradient(ellipse at center, rgba(255,255,255,0) 0%,rgba(255,255,255,0.11) 14%,rgba(19,19,19,0.8) 100%);
+    }
+}
+
+hr{
+    height: 1px;
+    background: rgba(0, 0, 0, .16);
+    margin: 20px 0 24px 0;
+}
+
+.tooltip{
+    &__container{
+        width: 261px;
+        
+    }
+
+    &__track__name{
+        .text(100, 15px, inherit, 18px);
+        margin: 0 0 5px 0;
+    }
+
+    &__track__title{
+        .text(300, 16px, inherit, 23px);
+        margin: 0 0 12px 0;
+    }
+
+    &__track__info{
+        opacity: .4;
+        margin-bottom: 19px;
+    }
+}
+
+
+.latest__download{
+    .size(20px, 24px);
+    background: url(../img/download.png) no-repeat;
+    display: block;
+    bottom: 28px;
+    right: 0;
+    position: relative;
+    float: right;
+}
+
+.latest__track--2,
+.latest__track--6{
+    background-color: @blue-1;
+}
+
+.latest__track--4{
+    background-color: @blue-2;
+}
+
+.latest__track__like:after,
+.latest__track__comments:after{
+    background: url(../img/latest__heart+comments.png) no-repeat;
+    top: 3px;
+
+}
+.latest__track__comments:after{
+    background-position: -45px;
+    top: 2px;
+}
+
+.latest__track__like{
+    margin: 0 0 0 205px;
+}
+
+
+@media only all and (max-width: 460px){
+    .wrap{
+        width: 360px;
+    }
+
+    .top{
+        min-width: 360px;
+    }
+
+    .track__title{
+        font-size: 34px;
+        line-height: 44px;
+        width: 360px;
+    }
+
+    .itunes{
+        float: none;
+        position: static;
+        margin-bottom: 47px;
+    }
+
+    .player{
+        height: 141px;
+    }
+
+    .latest__track{
+        width: 360px;
+        background-size: cover;
+    }
+
+    .latest__tracks{
+        display: block;
+        column-count: auto;
+        margin: 0 auto 20px;
+    }
+
+    .latest__track__tooltip{
+        width: 320px;
+    }
+
+    .tooltip__container{
+        width: 320px;
+    }
+
+    .latest__track__like{
+        margin: 0 0 0 267px;
+    }
+
+    .twitter{
+        min-width: 360px;
+        padding: 138px 0 68px 0;
+    }
+
+    .latest__track:nth-of-type(5), .latest__track:nth-of-type(6){
+        display: none;
+    }
+
+    .podcats__menu__item{
+        float: none;
+        margin-bottom: 20px;
+    }
+
+    .host--1{
+        margin-bottom: 32px;
+    }
+
+    .podcats__host__some_text, .podcats__host__nickname{
+        font-size: 16px;
+    }
+
+    .podcats__host__name{
+        font-size: 26px;
+    }
+
+    .podcats .podcats__hosts .podcats__host div.podcats__host__foto{
+        .size(132px, 132px);
+        background-size: cover;
+    }
+
+    .footer .wrapp__some_text, .footer .wrapp__some_text--2{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    .footer .wrapp__some_text{
+        margin-bottom: 62px;
+    }
+
+    .footer{
+        padding: 75px 0 75px 0;
+    }
+
+
+    a.podcats__link_episodes:nth-of-type(3), a.podcats__link_episodes:nth-of-type(6), a.podcats__link_episodes{
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 20px;
+        margin-top: 0;
+        float: none;
+    }
+
+
+}
