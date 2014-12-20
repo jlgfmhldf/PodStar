@@ -506,7 +506,7 @@ hr {
   .latest__track {
     width: 360px;
     background-size: cover;
-    margin: 0 auto;
+    margin: 0 auto 20px;
   }
   .latest__tracks {
     display: block;
